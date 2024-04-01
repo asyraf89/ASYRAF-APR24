@@ -1,8 +1,10 @@
 #My First Workflow
 
 name: workflow1
-on: 
-  push
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   job1:
@@ -16,6 +18,7 @@ jobs:
         run: |
           cat /etc/os-release
           sleep 5
+          hostname
 ## Name is not important in a step
       - run: uname -a
       
